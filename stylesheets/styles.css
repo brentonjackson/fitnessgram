@@ -37,7 +37,7 @@ a {
     padding: 0;
     white-space: nowrap;
     overflow-x: auto;
-    overflow-y: hidden;
+/*    overflow-y: hidden;*/
     flex: 0 1 auto;
     order: 2;
     display: flex;
@@ -75,8 +75,28 @@ a {
 
 .detail-image-container {
     flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-frame {
+    position: relative;
+    text-align: center;
 }
 
 .detail-image {
-    width: 80%;
+    width: 95%;
+}
+
+.detail-image-title {
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
+    
+    color: white;
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+    
 }
