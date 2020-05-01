@@ -35,6 +35,7 @@ a {
 .thumbnail-list {
     list-style: none;
     padding: 0;
+    margin-top: 50px;
     white-space: nowrap;
     overflow-x: auto;
 /*    overflow-y: hidden;*/
@@ -69,7 +70,8 @@ a {
 
 .thumbnail-image {
     width: 100%;
-    height: 100%; /* because they were stretched vertically at 100% */
+/*    height: 100%;*/
+    /* because they were stretched vertically at height 100% */
     display: block;
 }
 
@@ -99,4 +101,23 @@ a {
     font-size: 40px;
     text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
     
+}
+
+/* Media Queries */
+@media all and (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .thumbnail-list {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+    }
+    .thumbnail-item {
+        max-width: 260px;
+    }
+    .thumbnail-item + .thumbnail-item {
+        margin-top: 20px;
+    }
 }
