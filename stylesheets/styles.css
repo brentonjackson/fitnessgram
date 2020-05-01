@@ -1,0 +1,47 @@
+body {
+    font-size: 10px;
+    background-color: darkgrey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo-text {
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 37px;
+    font-family: 'Permanent Marker', cursive, Roboto, sans-serif;
+}
+
+.thumbnail-title {
+    display: block;
+    margin: 0;
+    padding: 4px 10px;
+    
+    background: rgb(200, 0, 0);
+    color: lightgrey;
+    font-size: 18px;
+}
+
+.thumbnail-image {
+    width: 30%;
+    display: block;
+}
+
+/*omitting first thumbnail*/
+.thumbnail-item + .thumbnail-item {
+    margin-top: 10px;
+}
+
+.thumbnail-item {
+    border: 1px solid rgb(100%, 100%, 100%);
+    border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    display: block;
+}
+
+.thumbnail-list {
+    list-style: none;
+    padding: 0;
+}
