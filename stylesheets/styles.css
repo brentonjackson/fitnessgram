@@ -34,7 +34,7 @@ a {
 
 .thumbnail-list {
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
     margin-top: 50px;
     white-space: nowrap;
     overflow-x: auto;
@@ -56,6 +56,11 @@ a {
     display: inline-block;
     min-width: 120px;
     max-width: 120px;
+    
+    transition: transform 133ms ease-in-out;
+}
+.thumbnail-item:hover {
+    transform: scale(1.2);
 }
 
 .thumbnail-title {
@@ -86,6 +91,13 @@ a {
 .detail-image-frame {
     position: relative;
     text-align: center;
+    
+    transition: transform 333ms;
+}
+
+.is-tiny {
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 
 .detail-image {
@@ -128,6 +140,7 @@ a {
         flex-direction: column;
         order: 0;
         margin-left: 20px;
+        padding: 35px;
     }
     .thumbnail-item {
         max-width: 260px;
