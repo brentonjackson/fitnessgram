@@ -104,6 +104,20 @@ a {
     
 }
 
+/*hide detail image when I add this class*/
+.hidden-detail .detail-image-container {
+    display: none;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+    max-width: 80%;
+}
+
 /* Media Queries */
 @media all and (min-width: 768px) {
     .main-content {
