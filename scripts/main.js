@@ -1,3 +1,13 @@
+// Add back functionality to navbar back link
+const backLink = document.getElementsByClassName('nav-back-link')[0];
+function backFunc () {
+    window.history.back();
+    console.log('went back!')
+}
+backLink.addEventListener('click', backFunc);
+
+
+
 // JS to make clicked image the big one
 // Using es5 syntax
 

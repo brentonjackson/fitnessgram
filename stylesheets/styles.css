@@ -19,11 +19,27 @@ a {
 }
 
 .logo-text {
+	display: flex;
+	align-items: center;
+	width: 100%;
+flex-direction: column;
     background: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 37px;
     font-family: 'Permanent Marker', cursive, Roboto, sans-serif;
+}
+
+
+
+.nav-back-link {
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.nav-title {
+	font-size: xxx-large;
+	margin: .1em auto;
 }
 
 .main-content {
@@ -129,6 +145,10 @@ a {
 
 /* Media Queries */
 @media all and (min-width: 768px) {
+    .logo-text {
+        flex-direction: row;
+    }
+
     .main-content {
         flex-direction: row;
         overflow: hidden;
