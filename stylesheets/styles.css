@@ -35,6 +35,7 @@ flex-direction: column;
 .nav-back-link {
 	font-size: 15px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .nav-title {
