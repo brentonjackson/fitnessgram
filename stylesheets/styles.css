@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -65,9 +64,10 @@ a {
   list-style: none;
   padding: 20px 0;
   margin-top: 50px;
+  margin-bottom: 35px;
   white-space: nowrap;
   overflow-x: auto;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   flex: 0 1 auto;
   order: 2;
   display: flex;
