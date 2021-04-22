@@ -5,7 +5,18 @@ body {
 
 body {
   font-size: 10px;
-  background-color: darkgrey;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   display: flex;
   flex-direction: column;
 }
@@ -72,6 +83,7 @@ a {
   order: 2;
   display: flex;
   justify-content: space-between;
+  z-index: 5;
 }
 
 .thumbnail-item {
@@ -121,6 +133,28 @@ a {
   transition: transform 333ms;
 }
 
+.detail-image-frame-gradient {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(0, 0, 0, 0)),
+    color-stop(1%, rgba(0, 0, 0, 0)),
+    to(#000)
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 1%,
+    #000 100%
+  );
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
 .is-tiny {
   transform: scale(0.001);
   transition: transform 0ms;
@@ -134,10 +168,10 @@ a {
   position: absolute;
   bottom: -16px;
   left: 4px;
-
+  z-index: 2;
   color: white;
   font-family: Oswald, sans-serif;
-  font-size: 40px;
+  font-size: 28px;
   text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
 }
 
@@ -159,6 +193,9 @@ a {
 @media all and (min-width: 768px) {
   .logo-text {
     flex-direction: row;
+  }
+  .detail-image-title {
+    font-size: 40px;
   }
 
   .main-content {
